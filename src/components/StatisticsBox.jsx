@@ -32,7 +32,7 @@ const StatisticsBox = ({ selectedMonth }) => {
     };
 
     fetchStatistics();
-  }, []);
+  }, [selectedMonth]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 border rounded-lg shadow-lg bg-white">

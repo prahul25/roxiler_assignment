@@ -33,7 +33,7 @@ export default function Home() {
 
       <div>
         <div>
-          <TransactionsTable selectedMonth={selectedMonth} />
+          <TransactionsTable/>
         </div>
         <div className="p-4 border rounded-lg shadow-lg bg-white flex flex-col items-center">
           <button
