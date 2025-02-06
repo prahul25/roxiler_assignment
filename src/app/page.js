@@ -10,23 +10,24 @@ export default function Home() {
   const [showBarChart, setShowBarChart] = useState(true);
   return (
     <main className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">📊 Transactions Dashboard</h1>
-        <select
-          value={selectedMonth}
-          onChange={(e) => setSelectedMonth(e.target.value)}
-          className="border p-2 rounded shadow"
-        >
-          {[
-            "January", "February", "March", "April", "May", "June", 
-            "July", "August", "September", "October", "November", "December"
-          ].map((month) => (
-            <option key={month} value={month}>{month}</option>
-          ))}
-        </select>
-      </div>
+      <div className="fixed top-0 left-0 w-full bg-white/30 backdrop-blur-md shadow-md px-6 py-4 flex justify-between items-center z-50">
+  <h1 className="text-2xl font-bold text-gray-800">📊 Transactions Dashboard</h1>
+  <select
+    value={selectedMonth}
+    onChange={(e) => setSelectedMonth(e.target.value)}
+    className="border border-gray-300 p-2 rounded-md shadow-sm bg-white focus:outline-none focus:ring focus:ring-blue-300 transition"
+  >
+    {[
+      "January", "February", "March", "April", "May", "June", 
+      "July", "August", "September", "October", "November", "December"
+    ].map((month) => (
+      <option key={month} value={month}>{month}</option>
+    ))}
+  </select>
+</div>
 
-      <div className="mb-6">
+
+      <div className="mb-6 mt-12">
         <StatisticsBox selectedMonth={selectedMonth} />
       </div>
 
